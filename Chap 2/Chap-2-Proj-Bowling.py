@@ -1,7 +1,7 @@
 #David Hickox
 #jan 24 17
 #Bowling Prgm
-#Calculates the Bowling you can get out of a single tank of gas
+#Calculates the Bowling averages and totals
 #variables
 #   kim1-3, holds the scores for kim
 #	kourt1-3, holds the scores for kourtney
