@@ -3,7 +3,7 @@
 #Payroll Prgm
 #Calculates the pay for your workers
 #variables
-#   list is a list of the employeyes name in the order justin jack rohan mike
+#       list is a list of the employeyes name in the order justin jack rohan mike
 #	w = width of the array 
 #	h = height of the array 
 #	array column 1 is pay rate for each person in the above order, and the second column is the hours worked,
@@ -16,25 +16,25 @@
 #imports date time and curency handeling because i hate string formating (this takes the place of #$%sleepf"%) 
 import locale
 import time #time is used in this program to give it an old timey computer feel printing the lines slowly instead of vomiting 4 pay stubs at you rather agressivly
-import sys
-locale.setlocale( locale.LC_ALL, '' )
-#use locale.currency() for currency formating
-
+import sys #sys is used to print the strings a single character at a time
+locale.setlocale( locale.LC_ALL, '' ) #sets the locale setting to whatever the computer it is running on is set to
 
 #initializes all the values
 w = 6 
 h = 4
 #creates array
 array = [[0 for x in range(h)] for y in range(w)] 
+#creats the list of names
 list = ["Justin Lefkowitz", "Jack Taylor", "Rohan Bhargava", "Micheal Clinkert"]
 #i felt like haveing some fun, so this is just meant to slow the program down to make it look like it is being run up on an old machene working hard, set these to 0 to negate their effects
-sleep = .2
+linesleep = .2
+charsleep = .02
 def print_slow(str): #changes the print statement to print strings on character at at time and adds a delay inbeteen characters and after each line
     for letter in str:
         sys.stdout.write(letter)
         sys.stdout.flush()
-        time.sleep(0.02)
-    time.sleep(sleep)
+        time.sleep(charsleep)
+    time.sleep(linesleep)
 #enters pay rates
 array[0][0] = 8.35
 array[0][1] = 15.5
@@ -51,6 +51,7 @@ for i in range(0, 4):
 	array[2][i] = array[5][i]*.07#ss
 	array[3][i] = array[5][i]*.15#tax
 	array[4][i] = array[5][i]-array[2][i]-array[3][i]#net
+#prints the results in a well formated mannor
 for i in range(0, 4):
 	print_slow("\n\n________________________________________________________________________________\n")
 	print_slow("\nName:\t\t\t "+list[i]+"\n")
@@ -69,7 +70,5 @@ for i in range(0, 4):
 	print_slow(format("___________________________\n", '>81'))
 	print_slow(format("Mrs. Epstein, Big Boss\n", '>81'))
 	print_slow("\n________________________________________________________________________________\n")
-#prints the results in a well formated mannor
-
 #waits for the user to end the program
 input("\n\nPress Enter to Exit")
