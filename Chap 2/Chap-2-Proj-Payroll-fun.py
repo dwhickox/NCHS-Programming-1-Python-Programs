@@ -24,7 +24,7 @@ w = 6
 h = 4
 #creates array
 array = [[0 for x in range(h)] for y in range(w)] 
-#creats the list of names
+#creates the list of names
 list = ["Justin Lefkowitz", "Jack Taylor", "Rohan Bhargava", "Micheal Clinkert"]
 #i felt like haveing some fun, so this is just meant to slow the program down to make it look like it is being run up on an old machene working hard, set these to 0 to negate their effects
 linesleep = .2
