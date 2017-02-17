@@ -1,7 +1,7 @@
 #David Hickox
 #Feb 16 17
 #expensive grades
-#descriptions, description, much descripticve
+#Calculates the amount of money you owe your teacher doubling how many pennies you give her every day
 #variables
 #   i, sentry variable
 #   total, total amount for a given day
