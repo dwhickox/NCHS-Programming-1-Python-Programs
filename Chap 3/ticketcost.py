@@ -12,7 +12,7 @@
 import locale
 locale.setlocale( locale.LC_ALL, '' )
 #use locale.currency(var, symbol=True, grouping=True) for currency formating
-print("Welcome to the (insert name here bumbblefack) Program\n")
+print("Welcome to the Ticket Cost Program\n")
 i = 1
 cost = 0
 print("Number of tickets\tTotoal Cost of Tickets")
