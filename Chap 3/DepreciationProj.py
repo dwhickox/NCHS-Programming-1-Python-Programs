@@ -29,7 +29,7 @@ while cont.lower() == "y" or cont.lower() == "yes" or cont == "1":
     ul = float(input("What is the useful life of this in years? "))
     #deos the math to find the yearly deprecaition
     dep = (cost-svalue)/ul
-    #prints the result
+    #prints the result (concatination used for consistancey, hence the string conversion
     print("\nGreat Ep-Hick Company")
     print("Accounting Department\n")
     print ("Name:\t\t"+name.title())
@@ -40,5 +40,4 @@ while cont.lower() == "y" or cont.lower() == "yes" or cont == "1":
     #askes the user if they would like to continue
     cont = input("\nWould you like to continue Y/N? ")
 
-input("Press entrer to exit")
-
+input("Press enter to exit")
