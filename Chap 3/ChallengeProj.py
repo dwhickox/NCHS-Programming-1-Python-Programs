@@ -1,7 +1,7 @@
 #David Hickox
 #Feb 28 16
 #Challenge
-#descirptions are much descriptive
+#Finds a spesific palindrome as per the requirments in car talk 
 #variables
 #   count, sentry
 
