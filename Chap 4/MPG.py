@@ -1,7 +1,7 @@
 #David Hickox
-#Mar 9 17
-#Jimmmie Hans, freaky fast physics
-#this will calculate the total of a 15 sandwitch platter
+#Mar 14 17
+#MPG Program
+#this will calculate the mpg of your weekly trips
 #variables
 #   array just creates the table, column 1 week, column 2 gallons column 3 - miles, calumn 4 mpg
 
