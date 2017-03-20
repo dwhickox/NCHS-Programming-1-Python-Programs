@@ -5,6 +5,7 @@
 #this will tell each of the 7 dwarfs if they can type fast enough or not
 #variables
 #   STUDENTS = names of the dwarfs
+#   num = WPM
 """
 STUDENTS = ["Bashful", "Doc", "Dopey", "Happy", "Sleepy", "Sneezy", "Grumpy"]
 
