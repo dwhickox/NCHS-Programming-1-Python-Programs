@@ -1,8 +1,8 @@
 """
 #David Hickox
-#Mar 9 17
-#Jimmmie Hans, freaky fast physics
-#this will calculate the total of a 15 sandwitch platter
+#Mar 14 17
+#Mark Up Program
+#This will calculate the markup for some toys
 #variables
 #   ARRAY just creates the table, column 1 week, column 2 gallons column 3 - miles, column 4 mpg
 """
