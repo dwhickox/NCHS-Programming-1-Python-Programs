@@ -10,9 +10,11 @@
 STUDENTS = ["Bashful", "Doc", "Dopey", "Happy", "Sleepy", "Sneezy", "Grumpy"]
 
 print ("Welcome to the Typing program")
-
-for i in range(len(STUDENTS)):
+#starts the loop
+for i in range(len(STUDENTS)):]
+    #asks for input
     num = float(input("How many words per minute can "+STUDENTS[i]+" type? "))
+    #cecks to see what wpm someone types at 
     if num >= 150:
         print(STUDENTS[i].upper(),"PUT DOWN THE COFFEE!!!")
     elif num >= 25:
