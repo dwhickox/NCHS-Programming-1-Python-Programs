@@ -11,7 +11,7 @@ STUDENTS = ["Bashful", "Doc", "Dopey", "Happy", "Sleepy", "Sneezy", "Grumpy"]
 
 print ("Welcome to the Typing program")
 #starts the loop
-for i in range(len(STUDENTS)):]
+for i in range(len(STUDENTS)):
     #asks for input
     num = float(input("How many words per minute can "+STUDENTS[i]+" type? "))
     #checks to see what wpm someone types at 
