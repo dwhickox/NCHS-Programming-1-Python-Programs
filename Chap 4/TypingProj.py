@@ -9,16 +9,16 @@
 """
 STUDENTS = ["Bashful", "Doc", "Dopey", "Happy", "Sleepy", "Sneezy", "Grumpy"]
 
-print ("Welcome to the Typing program")
+print("Welcome to the Typing program")
 #starts the loop
-for i in range(len(STUDENTS)):
+for i in enumerate(STUDENTS):
     #asks for input
-    num = float(input("How many words per minute can "+STUDENTS[i]+" type? "))
-    #checks to see what wpm someone types at 
+    num = float(input("How many words per minute can "+i[1]+" type? "))
+    #checks to see what wpm someone types at
     if num >= 150:
-        print(STUDENTS[i].upper(),"PUT DOWN THE COFFEE!!!")
+        print(i[1].upper(), "PUT DOWN THE COFFEE!!!")
     elif num >= 25:
-        print(STUDENTS[i],"you can type fast enough to pass Keyboarding")
+        print(i[1], "you can type fast enough to pass Keyboarding")
     else:
-        print(STUDENTS[i]+", sorry you need to type faster!")
+        print(i[1]+", sorry you need to type faster!")
 input("Press Enter to exit")
