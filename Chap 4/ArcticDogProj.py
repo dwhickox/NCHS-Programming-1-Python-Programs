@@ -5,7 +5,6 @@
 #This will display how many snowmobiles were sold
 #variables
 #   array= an array with months in column zero and number sold in column 1
-#   num = WPM
 """
 
 print("Welcome to the Artic Dog program")
