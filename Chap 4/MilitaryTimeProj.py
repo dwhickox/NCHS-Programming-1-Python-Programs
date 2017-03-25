@@ -11,7 +11,9 @@
 #   minslice = the min information
 """
 #adds values to MIL_TIME
-MIL_TIME = ("00:45", "15:10", "20:03", "HH,MM", "17:36", "09:48", "10:11", "XX:09", "11:09", "10:04", "04:20", "05:09", "!8:$4")
+MIL_TIME = ("00:45", "15:10", "20:03", "HH,MM", "17:36", "09:48")
+#split to make pylint happy
+MIL_TIME += ("10:11", "XX:09", "11:09", "10:04", "04:20", "05:09", "!8:$4")
 #initializes the array hight and with variables
 H = 13
 W = 3
