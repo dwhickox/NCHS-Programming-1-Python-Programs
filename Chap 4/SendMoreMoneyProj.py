@@ -43,7 +43,7 @@ while X < 3628800:
             WORDLIST[WORD.index(LETTER)] = str(NUMBERS[X][I])
             #recompiles list into string
             WORD = "".join(WORDLIST)
-            #tells the if that the while has run 
+            #tells the if that the while has run
             RUN = 1
         # updates the count if the letter has not already been replaced
         if RUN == 1:
@@ -67,7 +67,7 @@ while X < 3628800:
         print("", WORD[0:4])
         print("+" + WORD[5:9])
         print("--------")
-        print("",WORD[10:])
+        print("", WORD[10:])
         #adds the result to prevent duplicates due to the extra numbers in the digit list
         PREV.append(WORD04)
 input("Press Enter to Exit!")
