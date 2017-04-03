@@ -27,6 +27,7 @@ WORD04 = 1
 WORD59 = 2
 WORD10 = 0
 NUMBERS = list(itertools.permutations(range(10)))
+print("Welcome to the send more money program!")
 #runs all logic, caped at 10! because that is how many posible combinations of 0-9 there are
 while X < 3628800:
     #resets I, word, and wordlist for each try
