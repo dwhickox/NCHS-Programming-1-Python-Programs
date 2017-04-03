@@ -24,7 +24,9 @@ while I.lower() == 'y' or I.lower() == 'yes':
     ARRAY[0][3] = 0
     ARRAY[1][3] = 0
     #asks the user how many cards they want
-    CARD = int(input("How many cards do you want?"))
+    CARD = int(input("How many cards do you want? "))
+    while CARD > 3:
+        CARD = int(input("You cannot choose more than 3 cards! How many cards do you want? "))
     #Picks cards for user
     for i in range(CARD):
         ARRAY[0][i] = random.randrange(1, 11)
