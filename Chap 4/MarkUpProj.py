@@ -13,8 +13,10 @@ locale.setlocale(locale.LC_ALL, '')
 #use locale.currency(var, symbol=True, grouping=True) for currency formating
 H = 6
 W = 6
+#creates array, not really needed but i like it
 ARRAY = [[0 for x in range(H)] for y in range(W)]
-print("Welcome to the MPG Program\n")
+print("Welcome to the Markup Program\n")
+#sets the array
 ARRAY[1][1] = "Teddy Bear"
 ARRAY[1][2] = 12.5
 ARRAY[2][1] = "Toy Train"
@@ -27,6 +29,7 @@ ARRAY[5][1] = "Pogo Stick"
 ARRAY[5][2] = 11
 
 print("Item\t\tCost\tMarkup\tRetail")
+#marks everything up and prints it
 for i in range(1, 6):
     ARRAY[i][3] = ARRAY[i][2]*1.4
     ARRAY[i][4] = ARRAY[i][2]*.4
