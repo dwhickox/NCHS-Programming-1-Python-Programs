@@ -1,6 +1,6 @@
 """
 #David Hickox
-#Mar 20 17
+#420-17
 #games program
 #this will organize a game night
 #variables
