@@ -13,6 +13,8 @@
 #   above = people above average
 #   below = below average
 #   equal = same as average
+#   TOT = total salary
+#   AVE = average salary, or release the shmoo
 """
 import locale
 locale.setlocale(locale.LC_ALL, '')
