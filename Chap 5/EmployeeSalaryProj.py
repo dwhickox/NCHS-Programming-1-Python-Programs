@@ -42,6 +42,7 @@ while CONT.upper() == 'Y':
 #does the math for total and ave Salary
 TOT = sum(ROW[1] for ROW in EMPLOYEES)
 AVE = TOT/NUM
+#prints above values
 print("\nTotal salary:", locale.currency(TOT, symbol=True, grouping=True))
 print("Average salary;", locale.currency(AVE, symbol=True, grouping=True))
 #figures out which emplayees fit in each catagory
@@ -58,8 +59,11 @@ for I in EMPLOYEES:
 #prints the employees that fit in each catagory and prints that there are
 #no employees that fit if there are none
 print("\nNumber of employees making more than average:", ABOVE[0])
+#checks to see if there are employees that fall under this catagory
+#if there are none it tells the user that
 if ABOVE[0] == 0:
     print("No employees make above average")
+#sets I to zero so that the if skips the first item but prints the rest
 I = 0
 for ITEM in ABOVE:
     if I == 0:
