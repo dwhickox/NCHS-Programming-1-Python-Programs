@@ -13,7 +13,7 @@ CRIMINALS = [["David Hickox", "H12345", 11], ["Zack Mikos", "M67890", 8],
              ["Shoshanna Perchanok", "P45678", "2"], ["Jimmie Schatz", "S23456", 10],
              ["Erika Christensen", "C90123", 5], ["Trevor Pavelka", "P78901", 15],
              ["Christina Vasquez", "V34567", 7], ["Zach Kunzer", "K56789", 4]]
-print("Welcome to the Employee Salary program")
+print("Welcome to the DMV program")
 PLATE = (input("\nWhat is the license plate number? ")).upper()
 for ITEM in CRIMINALS:
     if ITEM[1] == PLATE:
