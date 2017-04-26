@@ -8,8 +8,10 @@
 #   SELECT, the users choice
 """
 import os
-
+high = 2
+low = 2
 X == 0
+found = 0
 # nested sequence of students first name, last name, year, gender, and gpa
 students = [["White", "Snow", 9, "F", 3.56],
             ["Sprat", "Jack", 12, "M", 2.0],
@@ -85,6 +87,32 @@ def abovave():
             print(a, b, c, d, e, sep = "\t")
 #5
 def highlow():
+    for i in students:
+        if i[4] > high:
+            high = i[4]
+        if i[4] < low:
+            low = i[4]
+    for i in students:
+        if i[4] == high:
+            a, b, c, d, e = i
+            print("The highest gpa in the class is:)
+            print(a, b, c, d, e, sep = "\t")
+    for i in students:
+        if i[4] == low:
+            a, b, c, d, e = i
+            print("The lowest gpa in the class is:)
+            print(a, b, c, d, e, sep = "\t")
+#6
+def findstu():
+    print("Which student would you like to find?")
+    stufind = input("Please enter only a last name")
+    for i in students:
+        if i[0] == stufind.title():
+              a, b, c, d, e = i
+              print(a, b, c, d, e, sep = "\t")
+              found = 1
+    if found == 0:
+        print("Student not found")
 
 def exitprgm():
     X = 1
