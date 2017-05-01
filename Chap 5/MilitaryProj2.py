@@ -1,7 +1,7 @@
 """
 #David Hickox
-#Mar 24 17
-#Military Time Program
+#Apr 30 17
+#Military Time Program 2
 #This will display military times, standard times, and time from midnight in minutes
 #variables
 #   mil_time = a list of times and other garbled nonsence
