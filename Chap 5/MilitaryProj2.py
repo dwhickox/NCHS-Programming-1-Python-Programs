@@ -23,7 +23,6 @@ print("Welcome to the Military time program")
 print("\nMilitary Time\tStandard Time\tMinutes from Midnight")
 #does all of the logic for the program
 for i in enumerate(MIL_TIME):
-    print(i)
     #checks to see if the time is actualy a time and not garbage
     if MIL_TIME[i[0]][0:2].isdigit() and MIL_TIME[i[0]][3:5].isdigit():
         #stores military time
@@ -50,5 +49,6 @@ for i in enumerate(MIL_TIME):
     #This deletes the array entry as per new requirements
     else:
         del MIL_TIME[i[0]]
+        print("deleted an entry for bad formatting")
         #MIL_TIME.pop(i[0]) would also work
 input("\nPress Enter To Exit")
