@@ -6,12 +6,131 @@
 #variables
 #   X, check varible
 #   SELECT, the users choice
+#   single letter variables, temp placeholders for student info or function selectors
+#   TOT = total gpa
+#   AVE = average gpa
+#   Stusort = sorted students list
 """
 import os
+
+#1&5
+def schlist(z):
+    print("Last\t\tFirst\t\tGrade\tSex\tGPA")
+    if z == 0:
+        for i in students:
+            a, b, c, d, e = i
+            if len(a) > 7 and len(b) > 7:     
+                print(a, b, c, d, e, sep="\t") 
+            elif len(a) > 7:
+                print(a, b+"\t", c, d, e, sep="\t") 
+            elif len(b) > 7:
+                print(a+"\t", b, c, d, e, sep="\t")
+            else:
+                print(a+'\t', b+'\t', c, d, e, sep="\t")
+    else:
+        stusort = students[:]
+        stusort.sort()
+        for i in stusort:
+            a, b, c, d, e = i
+            if len(a) > 7 and len(b) > 7:     
+                print(a, b, c, d, e, sep="\t") 
+            elif len(a) > 7:
+                print(a, b+"\t", c, d, e, sep="\t") 
+            elif len(b) > 7:
+                print(a+"\t", b, c, d, e, sep="\t")
+            else:
+                print(a+'\t', b+'\t', c, d, e, sep="\t")
+#2&3
+def junsoph(g):
+    print("Last\t\tFirst\t\tGrade\tSex\tGPA")
+    for i in students:
+        if i[2] == g:
+            a, b, c, d, e = i
+            if len(a) > 7 and len(b) > 7:     
+                print(a, b, c, d, e, sep="\t") 
+            elif len(a) > 7:
+                print(a, b+"\t", c, d, e, sep="\t") 
+            elif len(b) > 7:
+                print(a+"\t", b, c, d, e, sep="\t")
+            else:
+                print(a+'\t', b+'\t', c, d, e, sep="\t")
+#4
+def abovave():
+    print("Last\t\tFirst\t\tGrade\tSex\tGPA")
+    TOT = sum(ROW[4] for ROW in students)
+    AVE = TOT/len(students)
+    for i in students:
+        if i[4] > AVE:
+            a, b, c, d, e = i
+            if len(a) > 7 and len(b) > 7:     
+                print(a, b, c, d, e, sep="\t") 
+            elif len(a) > 7:
+                print(a, b+"\t", c, d, e, sep="\t") 
+            elif len(b) > 7:
+                print(a+"\t", b, c, d, e, sep="\t")
+            else:
+                print(a+'\t', b+'\t', c, d, e, sep="\t")
+#5
+def highlow():
+    high = 2
+    low = 2
+    for i in students:
+        if i[4] > high:
+            high = i[4]
+        if i[4] < low:
+            low = i[4]
+    for i in students:
+        if i[4] == high:
+            a, b, c, d, e = i
+            print("The highest gpa in the class is:")
+            if len(a) > 7 and len(b) > 7:     
+                print(a, b, c, d, e, sep="\t") 
+            elif len(a) > 7:
+                print(a, b+"\t", c, d, e, sep="\t") 
+            elif len(b) > 7:
+                print(a+"\t", b, c, d, e, sep="\t")
+            else:
+                print(a+'\t', b+'\t', c, d, e, sep="\t")
+    for i in students:
+        if i[4] == low:
+            a, b, c, d, e = i
+            print("The lowest gpa in the class is:")
+            if len(a) > 7 and len(b) > 7:     
+                print(a, b, c, d, e, sep="\t") 
+            elif len(a) > 7:
+                print(a, b+"\t", c, d, e, sep="\t") 
+            elif len(b) > 7:
+                print(a+"\t", b, c, d, e, sep="\t")
+            else:
+                print(a+'\t', b+'\t', c, d, e, sep="\t")
+#6
+def findstu():
+    found = 0
+    print("Which student would you like to find?")
+    stufind = input("Please enter only a last name: ")
+    for i in students:
+        if i[0] == stufind.title():
+            a, b, c, d, e = i
+            if len(a) > 7 and len(b) > 7:     
+                print(a, b, c, d, e, sep="\t") 
+            elif len(a) > 7:
+                print(a, b+"\t", c, d, e, sep="\t") 
+            elif len(b) > 7:
+                print(a+"\t", b, c, d, e, sep="\t")
+            else:
+              print(a+'\t', b+'\t', c, d, e, sep="\t")
+            found = 1
+    if found == 0:
+        print("Student not found")
+        found = 0
+
+#these values are chosen simply because there is a gpa both above and below 2
 high = 2
 low = 2
-X == 0
+#sets up the rest of the variables
+X = 0
 found = 0
+z = 0
 # nested sequence of students first name, last name, year, gender, and gpa
 students = [["White", "Snow", 9, "F", 3.56],
             ["Sprat", "Jack", 12, "M", 2.0],
@@ -30,10 +149,25 @@ students = [["White", "Snow", 9, "F", 3.56],
             ["Mouse", "Mickey", 10, "M", 3.975],
             ["Brown", "Charlie", 9, "M", 1.25]]
 print("Welcome to the GPA program")
+#while loop runs whole program and calls the correct function based on what it wants to do
 while X == 0:
+    #resets all the variables used in the program just incase something is rerun and not correct.
     SELECT = 0
+    a = 0
+    b = 0
+    c = 0
+    d = 0
+    e = 0
+    i = 0
+    z = 0
+    found = 0
+    TOT = 0
+    AVE = 0
+    high = 2
+    low = 2
+    #creates menu
     print("""
-    Options are:
+    Your administrative options are:
     1. School List
     2. Sophmores
     3. Juniors
@@ -43,6 +177,7 @@ while X == 0:
     7. Find Student
     8. Exit
     """)
+    #asks the user for in
     SELECT = int(input("Which would you like to do (please enter a number)? "))
     os.system('cls') #clears screen
     if SELECT == 1:
@@ -55,64 +190,11 @@ while X == 0:
         abovave()
     elif SELECT == 5:
         schlist(1)
-input("\nPress Enter to exit")
-
-#1&
-def schlist(z):
-    print("Last\tFirst\tGrade\tSex\tGPA")
-    if z == 0:
-        for i in students:
-            a, b, c, d, e = i
-            print(a, b, c, d, e, sep = "\t")
+    elif SELECT == 6:
+        highlow()
+    elif SELECT == 7:
+        findstu()
+    elif SELECT == 8:
+        X = 1
     else:
-        stusort = students.sort()
-        for i in stusort:
-            a, b, c, d, e = i
-            print(a, b, c, d, e, sep = "\t")
-#2&3
-def junsoph(g):
-    print("Last\tFirst\tGrade\tSex\tGPA")
-    for i in students:
-        if i[2] == g:
-            a, b, c, d, e = i
-            print(a, b, c, d, e, sep = "\t")
-#4
-def abovave():
-    print("Last\tFirst\tGrade\tSex\tGPA")
-    TOT = sum(ROW[4] for ROW in students)
-    AVE = TOT/len(students)
-    for i in students:
-        if i[4] > AVE:
-            a, b, c, d, e = i
-            print(a, b, c, d, e, sep = "\t")
-#5
-def highlow():
-    for i in students:
-        if i[4] > high:
-            high = i[4]
-        if i[4] < low:
-            low = i[4]
-    for i in students:
-        if i[4] == high:
-            a, b, c, d, e = i
-            print("The highest gpa in the class is:)
-            print(a, b, c, d, e, sep = "\t")
-    for i in students:
-        if i[4] == low:
-            a, b, c, d, e = i
-            print("The lowest gpa in the class is:)
-            print(a, b, c, d, e, sep = "\t")
-#6
-def findstu():
-    print("Which student would you like to find?")
-    stufind = input("Please enter only a last name")
-    for i in students:
-        if i[0] == stufind.title():
-              a, b, c, d, e = i
-              print(a, b, c, d, e, sep = "\t")
-              found = 1
-    if found == 0:
-        print("Student not found")
-
-def exitprgm():
-    X = 1
+        print("That is not an option please try again!")
