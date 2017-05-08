@@ -1,0 +1,109 @@
+#   ******************   Input Function   *****************
+#
+def inputs():
+
+    """This function inputs data from the user."""
+    #      sal ....... Salary before commissions are added
+    #      emp ........ Name of salesperson
+    #      sales ............ Total sales by salesperson
+
+    employee = input("Enter employee name ---------> ")
+    salary = float(input("Enter base salary -----------> "))
+    sale = float(input("Enter sales for the month ---> "))
+    return employee, salary, sale
+
+#   ***************   Compute Function   ***************
+#
+def compute(sal, sales, emp):
+
+    """This function uses the basesalary and sales figures to
+       compute the salesperson's commission, grosssalary, indiv-
+       dual and total deductions (deduction1, deduction2,
+       deduction3, and deductions) and netsalary."""
+    #      sal ....... Salary before commissions are added
+    #      com ...... Amount of commissions earned
+    #      ded1 ....... For federal tax
+    #      ded2 ....... For state tax
+    #      ded3 ....... For retirement contribution
+    #      deds ....... Total deductions
+    #      emp ........ Name of salesperson
+    #      gross ...... Base salary + commissions
+    #      net ........ Gross salary - deductions
+    #      sales ............ Total sales by salesperson
+
+    #   Local Variables:
+    #      c_rate ..... Commission rate
+    #      f_rate ........ Federal tax withholding rate
+    #      s_rate .......... State tax withholding rate
+    #      r_rate ..... Retirement contribution rate
+
+    c_rate = .12
+    f_rate = .25
+    s_rate = .05
+    r_rate = .065
+    
+    com = sales * c_rate
+    gross = sal + com
+    ded1 = gross * f_rate
+    ded2 = gross * s_rate
+    ded3 = (gross - 500) * r_rate
+    deds = ded1 + ded2 + ded3
+    net = gross - deds
+    return com, gross, ded1, ded2, ded3, deds, net
+
+#   ****************   Display Function   ****************
+#
+def display(emp, sales, sal, com, gross, ded1, ded2, ded3, deds, net):
+
+    """This function displays the values of all variables
+       listed as parameters."""
+    #      sal ....... Salary before commissions are added
+    #      com ...... Amount of commissions earned
+    #      ded1 ....... For federal tax
+    #      ded2 ....... For state tax
+    #      ded3 ....... For retirement contribution
+    #      deds ....... Total deductions
+    #      emp ........ Name of salesperson
+    #      gross ...... Base salary + commissions
+    #      net ........ Gross salary - deductions
+    #      sales ............ Total sales by salesperson
+
+    print ()
+    print ()
+    print ("Employee:", emp, end = "")
+    print ("\t\t\tSales", round(sales,2))
+    print ()
+    print ("\tIncome\t\t\t\tDeductions")
+    print ()
+    print ("Base Salary\t$%.2f"% sal, end = "")
+    print ("\t\tFederal Tax\t$%.2f"% ded1)
+    print ("Commissions\t$%.2f"% com, end = "")
+    print ("\t\tState Tax\t$%.2f"% ded2)
+    print ("Gross Salary\t$%.2f"% gross, end = "")
+    print ("\t\tRetirement\t$%.2f"% ded3)
+    print ("\t\t\t\t\tTotal\t\t$%.2f"% deds)
+    print ()
+    print ("Net Salary is $%.2f"% net)
+
+#   ****************   Main Module   ****************
+def main():
+    """This functions calls the other functions in the correct order"""
+    emp, sal, sales = inputs()
+    com, gross, ded1, ded2, ded3, deds, net = compute(sal, sales, emp)
+    display (emp, sales, sal, com, gross, ded1, ded2, ded3, deds, net)
+    
+
+#   **************   An Employee Earnings Report   **************  
+
+#   This program computes the net monthly income
+#   (gross salary - deductions) for a salesperson.
+#   Functions:
+#      input ........ Inputs data from the user
+#      compute ... Calculates deductions and salary
+#      display ..... Displays the values of all variables
+
+print ("Welcome to the Employee's Earning Report")
+
+main()
+
+input("\nPress enter to exit.")
